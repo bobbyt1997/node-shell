@@ -13,5 +13,9 @@ process.stdin.on("data", (data) => {
     const file = cmd.substring(4);
     catFunc(file);
     console.log(file);
+  } else if (cmd.substring(0, 4) === "curl") {
+    const curlFunc = require("./curl.js");
+    const link = cmd.substring(5);
+    curlFunc(link);
   }
 });
