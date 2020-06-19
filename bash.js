@@ -8,6 +8,6 @@ process.stdin.on("data", (data) => {
     pwdFunc();
   } else if (cmd == "ls") {
     const lsFunc = require("./ls.js");
-    console.log(lsFunc);
+    lsFunc();
   }
 });
