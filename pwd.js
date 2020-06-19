@@ -4,4 +4,3 @@ function pwd() {
 }
 
 module.exports = pwd;
-
