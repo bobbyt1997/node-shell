@@ -7,6 +7,11 @@ process.stdin.on("data", (data) => {
     const pwdFunc = require("./pwd.js");
     pwdFunc();
   } else if (cmd == "ls") {
-    require("./ls.js"); // note that we don't
+    require("./ls.js"); 
+  } else if (cmd.substring(0, 3) == "cat") {
+    const catFunc = require("./cat.js");
+    const file = cmd.substring(4);
+    catFunc(file);
+    console.log(file);
   }
 });
